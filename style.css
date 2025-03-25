@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  height: 100vh;
+  color: #fff;
+  font-size: 20px;
+
+  /* GRID */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+.navigation-bar-container {
+  background-color: chocolate;
+
+  /* GRID-child*/
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+
+  /* GRID-parent*/
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.dashboard-container {
+  background-color: bisque;
+  color: black;
+
+  /* GRID-child */
+  grid-column: 1 /2;
+  grid-row: 1 / 4;
+
+  /* GRID-parent */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+.main-content-container {
+  background-color: crimson;
+  color: black;
+
+  /* GRID-child */
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+
+  /* GRID-parent */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+.projects-content {
+  /* Grid*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sidebar {
+  background-color: darksalmon;
+
+  /* GRID */
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+
+  /* GRID-parent*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
