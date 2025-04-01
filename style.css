@@ -33,8 +33,10 @@ h6 {
 /* Main Container */
 
 .main-container {
-  height: 100vh;
   color: #000;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 20px;
 
   /* GRID */
@@ -47,7 +49,10 @@ h6 {
 /* Navigation Bar Container */
 .navigation-bar-container {
   padding: 15px 30px;
-  background-color: rgb(238, 241, 241);
+  background-color: #fff;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
 
   /* GRID-child*/
   grid-column: 2 / 4;
@@ -74,7 +79,7 @@ h6 {
   padding: 8px;
   border-radius: 20px;
   border: none;
-  background-color: rgb(249, 251, 251);
+  background-color: #e6f0f7;
 }
 
 .user-nav-bar {
@@ -156,6 +161,7 @@ h6 {
 /* Dashboard Container */
 
 .dashboard-container {
+  padding: 15px 20px;
   background-color: bisque;
   color: black;
 
@@ -166,11 +172,59 @@ h6 {
   /* GRID-parent */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 0.5fr 2fr 2fr;
+  gap: 30px;
+
+  .dashboard-title {
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    justify-content: center;
+    justify-items: start;
+
+    h2 {
+      text-transform: capitalize;
+    }
+  }
+
+  .dashboard-nav {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+
+    .nav-item {
+      font-size: 25px;
+      text-transform: capitalize;
+      font-weight: bold;
+      display: grid;
+      grid-template-columns: 0.2fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .dashboard-utility-nav {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+
+    .nav-item {
+      font-size: 25px;
+      text-transform: capitalize;
+      font-weight: bold;
+      display: grid;
+      grid-template-columns: 0.2fr 1fr;
+      align-items: center;
+    }
+  }
 }
+/* END - Dashboard Container */
+
+/* Main content container */
 
 .main-content-container {
-  background-color: crimson;
+  padding: 30px 10px 20px 30px;
+  background-color: #e6f0f7;
   color: black;
 
   /* GRID-child */
@@ -180,23 +234,54 @@ h6 {
   /* GRID-parent */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 0.2fr 3fr;
 }
+.main-content-title {
+  height: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
 
-/* END - Dashboard Container */
-
-/* Projects Container */
-
+  h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+  }
+}
 .projects-content {
+  grid-column: 1/2;
+  grid-row: 2/3;
   /* Grid*/
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 0.7fr);
+  gap: 25px;
+
+  .project {
+    padding: 25px;
+    background-color: #f5f7fa;
+    border-radius: 7px;
+    border-left: 10px solid #2e8b57;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .project-title {
+      text-transform: capitalize;
+    }
+    .project-para {
+      margin-bottom: 10px;
+    }
+    .project-links {
+      display: grid;
+      grid-template-columns: repeat(3, 0.2fr);
+      align-items: center;
+      justify-content: end;
+      justify-items: center;
+    }
+  }
 }
-/* END - Projects Container */
+
+/* END - MAin content container */
 
 /* Sidebar */
 .sidebar {
-  background-color: crimson;
+  background-color: #e6f0f7;
 
   /* GRID */
   grid-column: 3 / 4;
